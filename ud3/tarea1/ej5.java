@@ -1,4 +1,4 @@
-package ejerciciosamorcito;
+package ud3.tarea1;
 
 import java.util.Scanner;
 
