@@ -1,19 +1,27 @@
 package ud3.reto;
 
-
+import java.util.Arrays;
 import java.util.Scanner;
 
 
 //Excepción propia
 class GordoException extends Exception {
-	//COMPLETAR
+	public GordoException (String mensaje) {
+		super(mensaje);
+	}
+	//COMPLETAR-Héctor Llano
 }
 
 public class LoteriaEq4 {	
 	
 	//devuelve un array de tamaño numBolas con todos los números del sorteo
 	public static int[] creaBomboNumeros(int numBolas) {
-		//COMPLETAR
+		
+		int[] BomboNumeros= new int[99999];
+		return BomboNumeros;
+		
+		//COMPLETAR-Héctor Llano
+		
 	}
 	
 	//devuelve un array de tamaño numPremios con todos los premios del sorteo
@@ -23,14 +31,32 @@ public class LoteriaEq4 {
 		bomboPremios[0]="PRIMER PREMIO";  // gordo de navidad
 		bomboPremios[1]="SEGUNDO PREMIO";	// un segundo premio
 		
-		//COMPLETAR
+		//COMPLETAR-Héctor Llano/ Mario Cano
 		
 		// un tercer premio
+		
+		bomboPremios[2]="TERCER PREMIO";  //el tercer premio
+		
 		// dos cuartos premios
-
+		
+		int premio =3;
+		
+		for (int i = 0; i < 2; i++) {
+			bomboPremios[premio] = "CUARTO PREMIO";
+			premio++;
+		}
+		
 		// 8 quintos premios
+		for (int i = 0; i <= 8; i++) {
+			bomboPremios[premio] = "QUINTO PREMIO";
+			premio++;
+		}
 
 		// el resto hasta completar 1.807 premios son "pedrea"
+		for (int i = 0; i < bomboPremios.length; i++) {
+			bomboPremios[premio] ="Pedrea";
+			premio++;
+		}
 		
 		System.out.println("Bombo de premios creado...");
 		return bomboPremios;
@@ -43,13 +69,17 @@ public class LoteriaEq4 {
 		int numAgraciado = (int) (Math.random()*bombo.length);
 
 		// si el número ya había salido, generamos otro al azar
-
-		//COMPLETAR
+		
+		 while (numAgraciado==numAgraciado-1) {
+			 numAgraciado = (int) (Math.random()*bombo.length);
+		}
+		
+		//COMPLETAR-Héctor Llano
 		
 		// marcamos el número que ha salido con -1 para que no vuelva a salir
-		bombo[numAgraciado]=-1;
+		return bombo[numAgraciado]=-1;
 		
-		//COMPLETAR
+		//COMPLETAR-Héctor Llano
 	}
 	
 	//devuelve un premio al azar del bombo de premios
@@ -61,12 +91,18 @@ public class LoteriaEq4 {
 		int indicePremiado = (int) (Math.random()*bombo.length);
 
 		// si el premio ya había salido, generamos otro al azar
-		//COMPLETAR
+		
+		//COMPLETAR-Héctor Llano
+		while (indicePremiado==indicePremiado-1) {
+			indicePremiado = (int) (Math.random()*bombo.length);
+		}
+		
 		
 		// marcamos el premio que ha salido 
-		//COMPLETAR
+		
+		//COMPLETAR-Héctor Llano
  				
-		return premio;
+		return bombo[indicePremiado]="Ya ha salido";
 	}
 	
 	
@@ -75,8 +111,13 @@ public class LoteriaEq4 {
 	public static String heSidoAgraciado(String[] numerosSorteo, String[] premiosSorteo, String miDecimo){
 		String premio="Número no premiado"; //valor por defecto
 			
-		//COMPLETAR
-
+		//COMPLETAR-Héctor Llano
+		
+		while (miDecimo==numerosSorteo.toString()) {
+			System.out.println("Agraciado con:" +premiosSorteo);
+		}
+		
+		return premio;
 	}
 	
 	
@@ -94,6 +135,8 @@ public class LoteriaEq4 {
 		
 		//Compruebo si me ha tocado la lotería
 		//COMPLETAR
+		
+		
 		
 	}
 				
