@@ -12,7 +12,7 @@ class GordoException extends Exception {
 	//COMPLETAR-Héctor Llano
 }
 
-public class LoteriaEq4 {	
+public class LoteriaEq4Final {	
 	
 	//devuelve un array de tamaño numBolas con todos los números del sorteo
 	public static int[] creaBomboNumeros(int numBolas) {
